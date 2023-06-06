@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/adebd696ce.js"></script>
+    <title>Shopee project</title>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: 'Poppins',sans-serif;
+   
+    
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background-color:#0c1c35;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+.container .logo{
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+}
+.container .nav ul{
+    display: flex;
+    flex-direction: row;
+}
+.container .nav ul li{
+    list-style: none;
+    padding: 0 20px;
+}
+.container .nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+
+}
+.container .nav ul li a:hover{
+    color:rgb(0, 255, 204) ;
+    
+}
+.home{
+    background-image: url("images/2.webp"); 
+      width: 100%;
+      height: 90vh;
+      background-size: cover;
+      background-position: top 25% right 0;
+    padding: 80px 60px;
+    color: white;
+    display: flex;
+    align-items: flex-start;
+  justify-content: right;
+   font-size: 25px;
+}
+.home h1{
+    color: #0c1c35;
+}
+.home button{
+    background-image: url("images/button.png");
+    background-color: transparent;
+    color: #0c1c35;
+    border: 0px;
+    padding: 14px 80px 14px 65px;
+    font-size: 21px;
+    font-weight: 700px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+}
+.feature{
+    padding: 40px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.feature .fe-box{
+    width: 180px;
+    text-align: center;
+    padding: 25px 15px;
+    border: 1px solid whitesmoke;
+    box-shadow: 20px 20px 34px rgba(0,0,0,0.03);
+    border-radius: 4px;
+    margin: 15px 0;
+}
+.feature .fe-box:hover{
+    box-shadow: 10px 10px 54px rgba(70,62,221,0.01);
+}
+.feature .fe-box h6{
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color: white;
+    background-color: pink;
+  
+}  
+.feature .fe-box:nth-child(2) h6{
+    background-color: aquamarine;
+}   
+.feature .fe-box:nth-child(3) h6{
+    background-color:skyblue;
+}   
+.feature .fe-box:nth-child(4) h6{
+    background-color: palevioletred;
+}   
+.feature .fe-box:nth-child(5) h6{
+    background-color: coral;
+}  
+.feature .fe-box:nth-child(6) h6{
+    background-color:lightblue;
+}   
+.page{
+    padding: 40px 80px;
+}
+.page .product{
+    text-align: center;
+}
+.page .pro-container{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.page .product .pro{
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    border-radius:20px ;
+    position: relative;
+}
+.page .product .pro:hover{
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.06);
+}
+.page .product .pro img{
+    width: 100%;
+    border-radius: 20px;
+}
+.page .product .pro .des{
+    text-align: start;
+    padding: 10px 0;
+}
+.page .product .pro .des span{
+    color: #606063;
+    font-size: 12px;
+}
+.page .product .pro .des h5{
+    padding-top: 7px;
+    color: black;
+    font-size: 14px;
+}
+.page .product .pro .des i{
+    font-size: 12px;
+    color: rgb(243, 181, 25);
+}
+.page .product .pro .des h4{
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #088178;
+}
+.page .product .pro .eu{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #e8f6ea;
+    font-weight: 500;
+    color: #088178;
+    border: 1px solid #cce7d0;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+.banner{
+    margin: 40px 0;
+}
+ .normal{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: black;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+
+}
+.normal:hover{
+    background:  #193871;
+    color: white;
+}
+.banner{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("images/b.jpg");
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+
+}
+.banner h4{
+    color: white;
+    font-size: 20px;
+}
+.banner h2{
+    color: white;
+    font-size: 30px;
+    padding: 10px 0;
+}
+.banner h2 span{
+    color:  #193871;
+}
+.page .arrial{
+    text-align: center;
+}
+.page .pro-container{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.page .arrial .pro{
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    border-radius:20px ;
+    position: relative;
+}
+.page .arrial .pro:hover{
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.06);
+}
+.page .arrial .pro img{
+    width: 100%;
+    border-radius: 20px;
+}
+.page .arrial .pro .des{
+    text-align: start;
+    padding: 10px 0;
+}
+.page .arrial .pro .des span{
+    color: #606063;
+    font-size: 12px;
+}
+.page .arrial .pro .des h5{
+    padding-top: 7px;
+    color: black;
+    font-size: 14px;
+}
+.page .arrial .pro .des i{
+    font-size: 12px;
+    color: rgb(243, 181, 25);
+}
+.page .arrial .pro .des h4{
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #088178;
+}
+.page .arrial .pro .eu{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #e8f6ea;
+    font-weight: 500;
+    color: #088178;
+    border: 1px solid #cce7d0;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+
+.newsletter{
+    padding: 40px 80px;
+    margin: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;  
+    background-image: url("images/bbg.png");
+    background-position: 20% 30%;
+   background-position: no-repeat; 
+}
+.newstext h4{
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+}
+.newstext p{
+    font-size: 14px;
+    font-weight: 600;
+    color: #088178;
+}
+.newstext p span{
+    color: white;
+}
+.newsletter input{
+    height: 3.125rem;
+    padding: 0 1.25rem;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    border-top-right-radius: 0 ;
+    border-bottom-right-radius: 0;
+}
+.newsletter button{
+    background-color: #088178;
+    color: #fff;
+    white-space: nowrap;
+    border-top-left-radius: 0 ;
+    border-bottom-left-radius: 0;
+}
+.newsletter .form{
+    display: flex;
+    width: 400;
+}
+.foot{
+    padding: 40px 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.foot .col {
+    display: flex;
+    flex-direction: column;
+   align-items: flex-start;
+   margin-bottom: 20px;
+}
+.foot h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+.foot p{
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+.foot a{
+    font-size: 13px;
+    text-decoration: none;
+    color: #222;
+    margin-bottom: 10px;
+}
+.foot .follow{
+    margin-top: 20px;
+}
+.foot .follow i{
+    color:#465b52 ;
+padding-right: 4px;
+cursor: pointer;
+}
+.foot .install .row img{
+border: 1px solid #088178;
+border-radius: 6px;
+}
+.foot .install img{
+    margin: 10px 0 15px 0;
+}
+.foot .follow i:hover,
+ .foot a:hover{
+color: #088178;
+}
+.foot .copyright{
+    width: 100%;
+    text-align: center;
+}
+     </style>
+<body>
+<div class="container">
+        <div class="logo">Shoppee</div>
+        <div class="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                 <li><a href="#">Shop</a></li>
+                  <li><a href="#">Blog</a></li>
+                   <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#"><i class="fa-solid fa-bag-shopping"></i></a></li>
+            </ul>
+        </div>
+    </div>
+<div class="home">
+        <div class="text">
+            <h5>Trade-in-offer</h5>
+            <h1>Super value deals <br> On all products</h1>
+            <p>Save more with coupons & up to 70% off!</p>
+            <button>Shop Now</button>
+        </div>
+    </div>
+<div class="feature">
+        <div class="fe-box">
+            <img src="images/f7.jpeg" width="150px"
+            height="150px">
+            <h6>Free Shipping</h6>
+        </div>
+        <div class="fe-box">
+            <img src="images/f23.jpg" width="150px"
+            height="150px">
+            <h6>Online Order</h6>
+        </div>
+        <div class="fe-box">
+            <img src="images/f3.jpeg" width="150px"
+            height="150px">
+            <h6>Save Money</h6>
+        </div>
+        <div class="fe-box">
+            <img src="images/f4.jpeg" width="150px"
+            height="150px">
+            <h6>Promotions</h6>
+        </div>
+        <div class="fe-box">
+            <img src="images/f5.jpeg" width="150px"
+            height="150px">
+            <h6>Happy Sell</h6>
+        </div>
+        <div class="fe-box">
+            <img src="images/f62.jpeg" width="150px"
+            height="150px">
+            <h6>F24/7 Support</h6>
+        </div>
+    </div>
+<div class="page">
+    <div class="product">
+        <h1>Featured Products</h1>
+        <p>Summer Collection New Mordern Design</p>
+      <div class="pro-container">
+        <div class="pro">
+            <img src="images/p1.jpg" >
+            <div class="des">
+                <span>adidas</span>
+                <h5>Cartoon Astronout T-Shirts</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <div class="eu">
+            <a href="#"><i class="fa fa-shopping-cart " aria-hidden="true"></i></a></div>
+        </div>
+        <div class="pro">
+            <img src="images/p2.jpeg" >
+            <div class="des">
+                <span>adidas</span>
+                <h5>T-Shirts</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <div class="eu">
+            <a href="#"><i class="fa fa-shopping-cart " aria-hidden="true"></i></a></div>
+        </div>
+        <div class="pro">
+            <img src="images/p3.jpeg" >
+            <div class="des">
+                <span>adidas</span>
+                <h5> Cool T-Shirts</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <div class="eu">
+            <a href="#"><i class="fa fa-shopping-cart " aria-hidden="true"></i></a></div>
+        </div>
+        <div class="pro">
+            <img src="images/p4.jpeg" >
+            <div class="des">
+                <span>adidas</span>
+                <h5>T-Shirts</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <div class="eu">
+            <a href="#"><i class="fa fa-shopping-cart " aria-hidden="true"></i></a></div>
+        </div>
+        <div class="pro">
+            <img src="images/p5.jpeg" >
+            <div class="des">
+                <span>adidas</span>
+                <h5> Shirts</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <div class="eu">
+            <a href="#"><i class="fa fa-shopping-cart " aria-hidden="true"></i></a></div>
+        </div>
+        <div class="pro">
+            <img src="images/p6.jpeg" >
+            <div class="des">
+                <span>adidas</span>
+                <h5> Shirts</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <div class="eu">
+            <a href="#"><i class="fa fa-shopping-cart " aria-hidden="true"></i></a></div>
+        </div>
+        <div class="pro">
+            <img src="images/p7.jpeg" >
+            <div class="des">
+                <span>adidas</span>
+                <h5> Shirts</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <div class="eu">
+            <a href="#"><i class="fa fa-shopping-cart " aria-hidden="true"></i></a></div>
+        </div>
+        <div class="pro">
+            <img src="images/p8.jpeg" >
+            <div class="des">
+                <span>adidas</span>
+                <h5>Shirts</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <div class="eu">
+            <a href="#"><i class="fa fa-shopping-cart " aria-hidden="true"></i></a>
+            </div>
+            </div>
+        </div>
+</div>
+ </div>
+ <div class="banner">
+    <h4>Repair services</h4>
+    <h2>Up to <span>70% Off </span>- All t-shirts,shirts & Accessories</h2>
+    <button class="normal">Explore More</button>
+</div>   
+<div class="page">
+    <div class="arrial">
+        <h1>New Arrivals</h1>
+        <p>Summer Collection New Mordern Design</p>
+      <div class="pro-container">
+        <div class="pro">
+            <img src="images/a1.jpg" >
+            <div class="des">
+                <span>adidas</span>
+                <h5>3-Peice Suit</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <div class="eu">
+            <a href="#"><i class="fa fa-shopping-cart " aria-hidden="true"></i></a></div>
+        </div>
+        <div class="pro">
+            <img src="images/a2.jpg">
+            <div class="des">
+                <span>adidas</span>
+                <h5>3-Peice Suit</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <div class="eu">
+            <a href="#"><i class="fa fa-shopping-cart " aria-hidden="true"></i></a></div>
+        </div>
+        <div class="pro">
+            <img src="images/a3.jpg" >
+            <div class="des">
+                <span>adidas</span>
+                <h5>3-Peice Suit</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <div class="eu">
+            <a href="#"><i class="fa fa-shopping-cart " aria-hidden="true"></i></a></div>
+        </div>
+        <div class="pro">
+            <img src="images/a4.jpg" >
+            <div class="des">
+                <span>adidas</span>
+                <h5>3-Peice Suit</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <div class="eu">
+            <a href="#"><i class="fa fa-shopping-cart " aria-hidden="true"></i></a></div>
+        </div>
+        <div class="pro">
+            <img src="images/a5.jpeg" >
+            <div class="des">
+                <span>adidas</span>
+                <h5> Coat</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <div class="eu">
+            <a href="#"><i class="fa fa-shopping-cart " aria-hidden="true"></i></a></div>
+        </div>
+        <div class="pro">
+            <img src="images/a6.jpeg" >
+            <div class="des">
+                <span>adidas</span>
+                <h5> Coat</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <div class="eu">
+            <a href="#"><i class="fa fa-shopping-cart " aria-hidden="true"></i></a></div>
+        </div>
+        <div class="pro">
+            <img src="images/a7.jpeg" >
+            <div class="des">
+                <span>adidas</span>
+                <h5> Coat</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <div class="eu">
+            <a href="#"><i class="fa fa-shopping-cart " aria-hidden="true"></i></a></div>
+        </div>
+        <div class="pro">
+            <img src="images/a8.jpeg" >
+            <div class="des">
+                <span>adidas</span>
+                <h5>Coat</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$78</h4>
+            </div>
+            <div class="eu">
+            <a href="#"><i class="fa fa-shopping-cart " aria-hidden="true"></i></a></div>
+        </div>
+        
+      </div>
+</div>
+
+
+    </div>
+<div class="newsletter">
+    <div class="newstext">
+        <h4>Sign Up For Newsletters</h4>
+        <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+    </div>
+    <div class="form">
+        <input type="text" placeholder="your email address">
+        <button class="normal">Sign Up</button>
+    </div>
+</div>
+ <footer class="foot">
+<div class="col">
+    <h1>Shoppee</h1>
+    <h4>Contact</h4>
+    <p><strong>Address: </strong> 562 Wellington Road, Street 32, San Francisco</p>
+    <p><strong>Phone: </strong> +01 2222 365 / (+91) 01 2345 6789</p>
+    <p><strong>Hours: </strong> 10:00 - 18:00,Mon - sat </p>
+    <div class="follow">
+        <h4>Follow us</h4>
+        <div class="icon">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-brands fa-telegram"></i>
+        </div>
+    </div>
+</div>
+<div class="col">
+    <h4>About</h4>
+    <a href="#">About us</a>
+    <a href="#">Delivery Information</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms & Conditions</a>
+    <a href="#">Contact us</a>
+</div>
+<div class="col">
+    <h4>My Account</h4>
+    <a href="#">Sign In</a>
+    <a href="#">View cart</a>
+    <a href="#">My Wishlist</a>
+    <a href="#">Track My Order</a>
+    <a href="#">help</a>
+</div>
+<div class="col install">
+    <h4>Install App</h4>
+    <p>From App Store or Google Play</p>
+    <div class="row">
+        <img src="images/app.png" width="200px" height="50px">
+        <img src="images/google.jfif" width="200px" height="50px">
+    </div>
+    <img src="images/payment.jfif" height="70px" >
+</div>
+<div class="copyright">
+    <p>0 2023, Tech2 etc - HTML CSS Ecommerce Template</p>
+</div>
+ </footer>  
+
+
+ <script src="script.js"></script>
+</body>
+</html>
+
+
+
